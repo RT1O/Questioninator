@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Lexend+Exa&display=swap');
+
+// Import Bulma's core
+@import '~bulma/sass/utilities/_all';
+
+// Set your colors
+$primary: #ff512f;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099ff;
+$twitter-invert: findColorInvert($twitter);
+
+$mobile: 768px;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+  'white': (
+    $white,
+    $black
+  ),
+  'black': (
+    $black,
+    $white
+  ),
+  'light': (
+    $light,
+    $light-invert
+  ),
+  'dark': (
+    $dark,
+    $dark-invert
+  ),
+  'primary': (
+    $primary,
+    $primary-invert
+  ),
+  'info': (
+    $info,
+    $info-invert
+  ),
+  'success': (
+    $success,
+    $success-invert
+  ),
+  'warning': (
+    $warning,
+    $warning-invert
+  ),
+  'danger': (
+    $danger,
+    $danger-invert
+  ),
+  'twitter': (
+    $twitter,
+    $twitter-invert
+  )
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+html {
+  height: 100%;
+}
+
+// Change the body background to a linear-gradient
+body {
+  min-height: 100%;
+
+  /* fallback for old browsers */
+  background: #ff512f;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #ff512f, #dd2476);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+  backface-visibility: hidden;
+}
+
+// Import Bulma and Buefy styles
+@import '~bulma';
+@import '~buefy/src/scss/buefy';
+
+// Remove the shadow from the box class
+.box {
+  box-shadow: none;
+  padding: 15px;
+  border-radius: 0;
+  width: 480px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 480px;
+}
+
+@media only screen and (max-width: $mobile) {
+  .box,
+  .header {
+    width: 100%;
+  }
+}
+
+.is-full-height {
+  min-height: 100vh;
+}
+
+$input-text-color: #3f3f3f;
+$input-border-size: 1px;
+$input-background-color: #f1f1f1;
+$input-hover-background-color: #fff;
+$input-placeholder-color: #696969;
+
+// Custom styled inputs
+.input {
+  box-shadow: none;
+  padding: 25px 10px;
+  font-family: 'Lexend Deca', sans-serif;
+
+  // Colors
+  color: $input-text-color;
+  border: $input-border-size $input-background-color solid;
+  background-color: $input-background-color;
+}
+
+.input:hover {
+  transition: 0.25s;
+  border-color: $input-background-color;
+}
+
+.input:focus {
+  box-shadow: none;
+  border: $input-border-size #000 solid;
+  background-color: $input-hover-background-color;
+}
+
+.input.title {
+  padding: 35px 10px;
+}
+
+// Change the input placeholders
+.input::placeholder {
+  color: $input-placeholder-color;
+}
+
+/* Internet Explorer 10-11 */
+.input::-ms-input-placeholder {
+  color: $input-placeholder-color;
+}
+
+/* Microsoft Edge */
+.input::-ms-input-placeholder {
+  color: $input-placeholder-color;
+}
+
+.button {
+  font-family: 'Lexend Exa', sans-serif;
+  margin: 3px;
+}
+
+// .button.is-custom-primary {
+// ..
+// }

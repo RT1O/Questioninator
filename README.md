@@ -6,6 +6,10 @@ A question/poll making site. Create questions /w up-to 10 available answers.
 
 - Node.js
 
-- Vue & Expres
+- Vue & Express
 
 - Bulma.io
+
+### Live demo
+
+A live demo is available at: http://poll.tozv.xyz
